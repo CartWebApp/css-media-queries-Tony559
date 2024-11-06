@@ -55,6 +55,7 @@
 .third {
   width: 32%;
   height: 18vh;
+  order: 2;
 }
 
 .quarter {
@@ -63,13 +64,42 @@
 }
 
 /* Tablet Styles*/
+@media screen and (min-width:520px) and (max-width:1024px) {
+  .quarter {
+    width: 48%;
 
+  }
+
+  .flex-container { 
+    height: fit-content;
+  }
+
+  .third { 
+    width: 48%;
+  }
+
+  .third:last-of-type {
+    width:  97.25%;
+    order: 1;
+  }
+}
 
 
 
 /* Mobile Styles*/
 
+@media screen and  (max-width:520px) {
+  .half,
+  .third,
+  .quarter
+   {
+    width: 97%;
+
+}
+} 
 
 
-
-
+/* One key point is that the media queries should be AFTER the main css file*/
+/* Another point is that the media queries should only change necessary things, */
+/* as seen above that only a couple things such as width are changed for each one */
+/* It is also necessary to check your website then use media queries only after design is complete and mobile is breaking */
